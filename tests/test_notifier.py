@@ -1,8 +1,9 @@
-import sys
-import os
-import unittest
-from unittest.mock import patch, MagicMock
 from io import StringIO
+import os
+import sys
+import unittest
+from unittest.mock import patch
+
 
 # 将 src 目录添加到模块搜索路径，方便导入项目中的模块
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
