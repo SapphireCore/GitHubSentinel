@@ -109,6 +109,6 @@ if __name__ == '__main__':
 """
 
     # 示例：生成 GitHub 报告
-    system_prompt = "Your specific system prompt for GitHub report generation"
+    system_prompt = "确定全部报告以简体中文输出，格式符合中文文法。"
     github_report = llm.generate_report(system_prompt, markdown_content)
     LOG.debug(github_report)
