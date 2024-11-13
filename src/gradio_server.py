@@ -63,10 +63,10 @@ with gr.Blocks(title="GitHubSentinel") as demo:
         gr.Markdown("## GitHub 项目进展")  # 添加小标题
 
         # 创建 Radio 组件
-        model_type = gr.Radio(["openai", "ollama"], label="模型类型", info="使用 OpenAI GPT API 或 Ollama 私有化模型服务")
+        model_type = gr.Radio(["openai", "ollama", "lm-studio"], label="模型类型", info="使用 OpenAI GPT API 或 Ollama 私有化模型服务")
 
         # 创建 Dropdown 组件
-        model_name = gr.Dropdown(choices=["gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo"], label="选择模型")
+        model_name = gr.Dropdown(choices=["gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo", "llama3.1-70b"], label="选择模型")
 
         # 创建订阅列表的 Dropdown 组件
         subscription_list = gr.Dropdown(subscription_manager.list_subscriptions(), label="订阅列表", info="已订阅GitHub项目")

@@ -86,6 +86,7 @@ def main():
             time.sleep(1)  # 短暂休眠以减少 CPU 使用
     except Exception as e:
         LOG.error(f"主进程发生异常: {str(e)}")
+        LOG.error("退出Daemon主进程。")
         sys.exit(1)
 
 

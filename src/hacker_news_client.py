@@ -11,7 +11,7 @@ class HackerNewsClient:
     def fetch_top_stories(self):
         LOG.debug("准备获取Hacker News的热门新闻。")
         try:
-            response = requests.get(self.url, timeout=10)
+            response = requests.get(self.url, timeout=30)
             response.raise_for_status()  # 检查请求是否成功
             top_stories = self.parse_stories(response.text)  # 解析新闻数据
             return top_stories
